@@ -2,7 +2,7 @@
 
 require 'vendor/autoload.php';
 
-$deployer = new \Oxicode\AutoGitPull\Deployer(array(
+$deployer = new \tmd\AutoGitPull\Deployer(array(
     'deployUser' => 'Oxicode',
     'directory' => '/var/www/mysite/',
     'logDirectory' => __DIR__ . '/log/',
