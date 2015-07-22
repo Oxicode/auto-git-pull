@@ -2,12 +2,12 @@
 
 require 'vendor/autoload.php';
 
-$deployer = new \Tmd\AutoGitPull\Deployer(array(
-    'deployUser' => 'anthony',
+$deployer = new \Oxicode\AutoGitPull\Deployer(array(
+    'deployUser' => 'Oxicode',
     'directory' => '/var/www/mysite/',
     'logDirectory' => __DIR__ . '/log/',
     'notifyEmails' => array(
-        'anthony@example.com'
+        'me@example.com'
     )
 ));
 
