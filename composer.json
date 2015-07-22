@@ -1,5 +1,5 @@
 {
-    "name": "Oxicode/auto-git-pull",
+    "name": "oxicode/auto-git-pull",
     "description": "Automatically pulls a git repository when commits are pushed.",
     "license": "MIT",
     "authors": [
