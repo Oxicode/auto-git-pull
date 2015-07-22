@@ -26,19 +26,19 @@ chmod +x vendor/tmd/auto-git-pull/scripts/git-pull.sh
 
 * Create a publicy accessible URL on your site which will be called by Github/Bitbucket and run the deployment (e.g. `http://mysite.com/deploy.php`) and set the parameters as appropriate. See `deploy.example.php` for an example.
 
-Example in Laravel:
+Example in StandAlone:
 ```php
-Route::post('deploy', function()
-{
-    $deployer = new \Tmd\AutoGitPull\Deployer(array(
-        'directory' => '/var/www/mysite/',
-        'logDirectory' => '/var/www/whodeletedme/app/storage/logs/deploy/',
+<?php
+require dirname(__DIR__) . '/Vendor/autoload.php';
+
+$deployer = new \Tmd\AutoGitPull\Deployer(array(
+        'directory' => '/var/www/my_app/',
+        'logDirectory' => '/var/www/my_app/tmp/deploy/',
         'notifyEmails' => array(
-            'anthony@example.com'
+            'me@gmail.com'
         )
     ));
     $deployer->deploy();
-});
 ```
 
 * Add the hook on Bitbucket to run the script:
@@ -97,5 +97,5 @@ origin	https://bitbucket.org/me/mysite.git (push)
 
 Change it to use ssh, like this:
 ```
-git remote set-url origin git@bitbucket.org:me/mysite.git
+git remote set-url origin git:mypassword@bitbucket.org:me/mysite.git
 ```
