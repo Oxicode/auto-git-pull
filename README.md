@@ -17,11 +17,11 @@ Setup
 
 ### Installation
 
-* Install the latest version with `composer require tmd/auto-git-pull`
+* Install the latest version with `composer require oxicode/auto-git-pull`
 
 * Make the pull script executable (you need to do this if you update the package as well):
 ```bash
-chmod +x vendor/tmd/auto-git-pull/scripts/git-pull.sh
+chmod +x vendor/oxicode/auto-git-pull/scripts/git-pull.sh
 ```
 
 * Create a publicy accessible URL on your site which will be called by Github/Bitbucket and run the deployment (e.g. `http://mysite.com/deploy.php`) and set the parameters as appropriate. See `deploy.example.php` for an example.
@@ -66,7 +66,7 @@ www-data ALL=(anthony) NOPASSWD: /var/www/mysite/vendor/tmd/auto-git-pull/script
 
 * Set the user to run the pull as in the parameters:
 ```php
-$deployer = new \Tmd\AutoGitPull\Deployer(array(
+$deployer = new \Oxicode\AutoGitPull\Deployer(array(
     'deployUser' => 'anthony',
     // ...
 ));
