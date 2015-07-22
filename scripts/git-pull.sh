@@ -39,3 +39,6 @@ git submodule update
 
 echo "composer install"
 composer install
+
+echo "Update migrations"
+bin/cake migrations migrate
